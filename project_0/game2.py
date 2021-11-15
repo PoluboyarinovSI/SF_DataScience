@@ -4,18 +4,22 @@ def random_preidct(number:int=1) -> int:
     """Randomly number predictor
 
     Args:
-       number (int, optional): Number ti predict. Defaults to 1.
+       number (int, optional): Number to predict. Defaults to 1.
 
     Returns:
         int: Attempts number
     """
-    count = 0
+    predict_number = np.random.randint(1, 100)
+    count = 1
         
     while True:
         count += 1
-        predict_number = np.random.randint(1, 100)
         if number == predict_number:
             break
+        elif number < predict_number:
+            predict_number = np.random.randint(number, predict_number)
+        elif number > predict_number:
+            predict_number = np.random.randint(predict_number+1, number+1)
     return count
     
 def score_game(random_preidct) -> int:
@@ -35,7 +39,7 @@ def score_game(random_preidct) -> int:
         count_ls.append(random_preidct(number))
         
     score = int(np.mean(count_ls))
-    print(f'Mean attempts to pretict numeber: {score}')
+    print(f'Mean attempts to predict numeber: {score}')
 
 
 if __name__ == '__main__':
