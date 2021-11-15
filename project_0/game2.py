@@ -1,5 +1,4 @@
 import numpy as np
-from numpy import random
     
 def random_preidct(number:int=1) -> int:
     """Randomly number predictor
