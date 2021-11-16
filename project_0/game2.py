@@ -1,4 +1,5 @@
 import numpy as np
+ 
     
 def random_predict(number:int=1) -> int:
     """Randomly number predictor
@@ -36,7 +37,8 @@ def random_predict(number:int=1) -> int:
             predict_number = left_border + (right_border-left_border)//2
             count += 1
     return count
-    
+
+
 def score_game(random_predict) -> int:
     """Mean attempts to predict
 
@@ -46,6 +48,7 @@ def score_game(random_predict) -> int:
     Returns:
         int: Mean attempts
     """
+    
     count_ls = []
     np.random.seed(1)
     random_array = np.random.randint(1, 100, size=(10)) # list of numbers
@@ -59,3 +62,4 @@ def score_game(random_predict) -> int:
 
 if __name__ == '__main__':
     score_game(random_predict)
+    
