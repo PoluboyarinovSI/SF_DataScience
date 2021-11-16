@@ -1,6 +1,6 @@
 import numpy as np
     
-def random_preidct(number:int=1) -> int:
+def random_predict(number:int=1) -> int:
     """Randomly number predictor
 
     Args:
@@ -9,38 +9,53 @@ def random_preidct(number:int=1) -> int:
     Returns:
         int: Attempts number
     """
-    predict_number = np.random.randint(1, 100)
+
+    first_attempt = 50
     count = 1
-        
+    
+    if number==first_attempt:
+        return count
+    predict_number = first_attempt
+      
+    if number<predict_number:  
+        left_border = 0
+        right_border = 50
+    else:
+        left_border = 50
+        right_border = 100
+
     while True:
-        count += 1
-        if number == predict_number:
+        if number==predict_number:
             break
-        elif number < predict_number:
-            predict_number = np.random.randint(number, predict_number)
-        elif number > predict_number:
-            predict_number = np.random.randint(predict_number+1, number+1)
+        if number<predict_number:
+            right_border = predict_number
+            predict_number = left_border + (right_border-left_border)//2
+            count += 1
+        else:
+            left_border = predict_number
+            predict_number = left_border + (right_border-left_border)//2
+            count += 1
     return count
     
-def score_game(random_preidct) -> int:
+def score_game(random_predict) -> int:
     """Mean attempts to predict
 
     Args:
-        random_preidct ([type]): predict function
+        random_predict ([type]): predict function
 
     Returns:
         int: Mean attempts
     """
     count_ls = []
     np.random.seed(1)
-    random_array = np.random.randint(1, 100, size=(1000)) # list of numbers
+    random_array = np.random.randint(1, 100, size=(10)) # list of numbers
         
     for number in random_array:
-        count_ls.append(random_preidct(number))
+        count_ls.append(random_predict(number))
         
     score = int(np.mean(count_ls))
     print(f'Mean attempts to predict numeber: {score}')
 
 
 if __name__ == '__main__':
-    score_game(random_preidct)
+    score_game(random_predict)
