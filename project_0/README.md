@@ -44,7 +44,7 @@
 
 
 ### Результат
-.....
+Написана программа, которая угадывает загаданное число от 0 до 100 менее чем за 20 попыток.
 
 :arrow_up[к оглавлению](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_0/README.md#Оглавление)
 
