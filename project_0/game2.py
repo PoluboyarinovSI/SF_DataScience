@@ -54,7 +54,7 @@ def score_game(random_predict) -> int:
         count_ls.append(random_predict(number))
         
     score = int(np.mean(count_ls))
-    print(f'Mean attempts to predict numeber: {score}')
+    print(f'Mean attempts to predict number: {score}')
 
 
 if __name__ == '__main__':
