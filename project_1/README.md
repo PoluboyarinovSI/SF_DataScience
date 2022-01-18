@@ -9,7 +9,7 @@
 [6. Выводы](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_1/README.md#Выводы)   
 
 ## Описание проекта
-Необходимо выполнить анализ, обработку и очистку данных, представленных в базеданных с резюме соискателей из HeadHunter.
+Необходимо выполнить анализ, обработку и очистку данных, представленных в базе данных с резюме соискателей из HeadHunter.
 
 :arrow_up[к оглавлению](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_1/README.md#Оглавление)
 
