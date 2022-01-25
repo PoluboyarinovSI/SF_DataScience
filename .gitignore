@@ -130,3 +130,6 @@ dmypy.json
 
 # Projects data
 project_1/data
+
+# Current tasks data
+Current_tasks/data
