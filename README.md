@@ -7,3 +7,4 @@
 * [Проект 3. Создание модели для предсказания рейтинга отеля](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_3)
 * [Проект 4. Создание модели для предсказания согласия на открытие депозита](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_4)
 * [Проект 5. Создание модели для предсказания продолжительности поездки такси в Нью-Йорке](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_5)
+* [Проект 6. Создание модели для сегментации клиентов](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_6)
