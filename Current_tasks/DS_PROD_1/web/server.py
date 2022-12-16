@@ -3,8 +3,10 @@ import numpy as np
 
 from flask import Flask, request, jsonify
 
+abs_path = 'C:\SkillFactory\SF_DataScience\Current_tasks\DS_PROD_1\web\models\model.pkl'
+
 # Загружаем модель из файла
-with open('models/model.pkl', 'rb') as pkl_file:
+with open(abs_path, 'rb') as pkl_file:
     model = pickle.load(pkl_file)
 
 
