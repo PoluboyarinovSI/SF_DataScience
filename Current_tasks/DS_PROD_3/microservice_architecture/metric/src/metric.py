@@ -12,7 +12,9 @@ try:
 
     # Создаём функцию callback для обработки данных из очереди
     def callback(ch, method, properties, body):
-        print(f'Из очереди {method.routing_key} получено значение {json.loads(body)}')
+        answer_string = f'Из очереди {method.routing_key} получено значение {json.loads(body)}'
+        with open('./logs/labels_log.txt', 'a') as log:
+            log.write(answer_string +'\n')
 
 
     # Извлекаем сообщение из очереди y_true
