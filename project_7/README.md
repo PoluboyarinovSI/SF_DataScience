@@ -51,7 +51,7 @@
 Результаты о проделанной работе представлены в нескольких частях:
 - Отчет по выполненой предобработке и разведовательном анализе данных (EDA) в Jupyter NoteBook (https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/Project-7_EDA.ipynb)
 - Отчет по созданию модели машинного обучения в Jupyter NoteBook (https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/Project-7_Modeling.ipynb)
-- Реализация модели в продакшене в виде веб-сервиса
+- Реализация модели в продакшене в виде веб-сервиса (https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/web)
 
 :arrow_up[к оглавлению](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/README.md#Оглавление)
 
