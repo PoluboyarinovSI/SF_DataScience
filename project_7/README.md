@@ -11,7 +11,7 @@
 ## Описание проекта
 Построить модель классификации банковских транзакций по кредитным картам для целей обнаружения мошеннических операций.
 
-:arrow_up[к оглавлению](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/README.md#Оглавление)
+:arrow_up: [к оглавлению](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/README.md#Оглавление)
 
 
 ### Какой кейс решаем?
@@ -34,7 +34,7 @@
 ### Краткая информация о данных
 В качестве исходных данных использован смоделированный набор данных о транзакциях по кредитным картам, содержащий законные и мошеннические транзакции за период с 1 января 2019 года по 31 декабря 2020 года. Набор данных охватывает кредитные карты 1000 клиентов, совершающих транзакции с пулом из 800 продавцов. Данные были взяти из Kaggle по ссылке: https://www.kaggle.com/datasets/kartik2112/fraud-detection?select=fraudTrain.csv. Общий объем: 501.5+ MB.
 
-:arrow_up[к оглавлению](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/README.md#Оглавление)
+:arrow_up: [к оглавлению](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/README.md#Оглавление)
 
 
 ### Этапы работы над проектом
@@ -44,7 +44,7 @@
 - Преобразование и создание и отбор признаков
 - Создание и обучение моделей
 
-:arrow_up[к оглавлению](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/README.md#Оглавление)
+:arrow_up: [к оглавлению](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/README.md#Оглавление)
 
 
 ### Результат   
@@ -53,7 +53,7 @@
 - Отчет по созданию модели машинного обучения в Jupyter NoteBook (https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/Project-7_Modeling.ipynb)
 - Реализация модели в продакшене в виде веб-сервиса, размещенная на DockerHub и доступная для скачивания pranons/fraud_detection_image (https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/web)
 
-:arrow_up[к оглавлению](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/README.md#Оглавление)
+:arrow_up: [к оглавлению](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/README.md#Оглавление)
 
 
 ### Выводы
@@ -63,7 +63,7 @@
 Таким образом, было построено 18 различных моделей. Из всех построенных моделей по показателю целевой метрики (Recall) наилучшими являются "DecisionTreeClassifier / Random Under Sampled" и "CatBoostClassifier / Random Under Sampled data". 
 В качестве итоговой модели выбрана модель "CatBoostClassifier / Random Under Sampled data", показатель Recall для которой составляет 0.975, а показатель F1-score составляет 0.984.
 
-:arrow_up[к оглавлению](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/README.md#Оглавление)
+:arrow_up: [к оглавлению](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7/README.md#Оглавление)
 
 
 Если информация по этому проекту покажется вам интересной или полезной, то я буду очень вам благодарен, если отметите репозиторий и профиль ⭐️⭐️⭐️-дами
