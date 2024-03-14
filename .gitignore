@@ -139,6 +139,7 @@ project_7/data
 
 # Current tasks data
 Current_tasks/data
+Current_tasks/MVP_1/saved_weights.pt
 
 # Virtualenv
 Current_tasks/project_web
