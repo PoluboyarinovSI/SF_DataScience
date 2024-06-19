@@ -9,3 +9,4 @@
 * [Проект 5. Создание модели для предсказания продолжительности поездки такси в Нью-Йорке](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_5)
 * [Проект 6. Создание модели для сегментации клиентов](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_6)
 * [Проект 7. Создание модели для обнаружения мошеннических транзакций по кредитным картам](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_7)
+* [Проект 8. Создание рекомендательной системы для интернет-магазина](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_8)
