@@ -1,17 +1,19 @@
 import numpy as np
 import pickle
 
-with open('./models/lightfm_model.pickle', 'rb') as f:
-    model = pickle.load(f)
+with open('./models/lfm_model.pkl', 'rb') as f:
+    lfm_model = pickle.load(f)
 
-with open('./models/sparse_user_item.pickle', 'rb') as f:
-    user_item_sparse_data = pickle.load(f)
+with open('./models/item_id.pkl', 'rb') as f:
+    item_sparse = pickle.load(f)
+    
+with open('./models/all_items.pkl', 'rb') as f:
+    all_items = pickle.load(f)
 
-visitorid_mapping, _, itemid_mapping, _ = dataset_mapping
-visitorid_labels = {v: k for k, v in visitorid_mapping.items()}
-itemid_labels = {v: k for k, v in itemid_mapping.items()}
+with open('./models/all_users.pkl', 'rb') as f:
+    all_users = pickle.load(f)
 
-
+'''
 def get_inner_model_visitorid(visitorid):
     return visitorid_mapping.get(visitorid)
 
@@ -30,16 +32,15 @@ def get_original_itemid(inner_itemid):
 
 def generate_top5_recommendations():
     pass
+'''
+
+def user_checker(visitorid):
+    return visitorid in all_users
 
 
-def predict(visitorid):
-    inner_model_visitorid = get_inner_model_visitorid(visitorid)
-    if not inner_model_visitorid:
+def get_predictions(visitorid):
+    if not user_checker(visitorid):
         return []
-    pred_scores = model.predict(inner_model_visitorid, np.arange(len(itemid_mapping)))
+    pred_scores = lfm_model.predict(visitorid, item_sparse)
     top_scores = np.argsort(-pred_scores)[:3]
-    return [itemid_labels[k] for k in top_scores]
-
-
-def check_visitor(visitorid):
-    return visitorid_mapping.get(visitorid, False) != False
+    return all_items[top_scores]

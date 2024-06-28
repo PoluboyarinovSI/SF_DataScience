@@ -2,7 +2,7 @@ import pickle
 import json
 import numpy as np
 
-from predictor import check_visitor, predict
+from predictor import user_checker, get_predictions
 from flask import Flask, request
 
 # объявление сервера
@@ -25,10 +25,10 @@ def index():
             if visitorid is None:
                 return "No visitorid input data"
 
-            if not check_visitor(visitorid):
+            if not user_checker(visitorid):
                 return "Wrong visitorid!"
 
-            recommendations = predict(visitorid)
+            recommendations = get_predictions(visitorid)
             recommendations = [str(rec) for rec in recommendations]
             recommendations_str = ", ".join(recommendations)
 
@@ -53,9 +53,9 @@ def recomm():
             visitorid = int(visitorid)
             if visitorid is None:
                 return []
-            if not check_visitor(visitorid):
+            if not user_checker(visitorid):
                 return []
-            recommendations = [int(rec) for rec in predict(visitorid)]
+            recommendations = [int(rec) for rec in get_predictions(visitorid)]
             recomm_json = {"recommendations": recommendations}
             return json.dumps(recomm_json)
     else:
