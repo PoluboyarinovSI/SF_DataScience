@@ -14,30 +14,32 @@ def index():
     if request.method == 'GET':
         params = request.args
         if not len(params):
-            return 'No input data'
+            return "Не введен идентификатор пользователя. Введите запрос в следующем виде '/?visitorid=...'"
         else:
             visitorid = request.args.get("visitorid")
+            
             if visitorid is None:
-                return "incorrect query parameter. Correct is '/?visitorid=...'"
+                return "Неверное значение идентификатора пользователя. Введите запрос в следующем виде '/?visitorid=...'"
+            
             if not visitorid.isnumeric():
-                return 'Incorrect visitorid. Numeric only!'
+                return 'Неверное значение идентификатора пользователя - принимаются только численные значения'
+            
             visitorid = int(visitorid)
+            
             if visitorid is None:
-                return "No visitorid input data"
+                return "Не введен идентификатор пользователя"
 
             if not user_checker(visitorid):
-                return "Wrong visitorid!"
+                return "Идентификатор пользователя не найден"
 
             recommendations = get_predictions(visitorid)
             recommendations = [str(rec) for rec in recommendations]
             recommendations_str = ", ".join(recommendations)
-
-            response = f"""
-            visitorid is {visitorid}, recommended itemids: {(recommendations_str)}
-            """
+            response = f'Для пользователя с идентификатором: {visitorid}, рекомендованы следующие товары: {(recommendations_str)}'
+           
             return response
     else:
-        return "<h1>No data in GET request</h1>"
+        return 'Данные в запросе отсутствуют'
 
 # реализация END-Point
 @app.route('/recomendations/', methods=['GET'])
@@ -56,11 +58,11 @@ def recomm():
             if not user_checker(visitorid):
                 return []
             recommendations = [int(rec) for rec in get_predictions(visitorid)]
-            recomm_json = {"recommendations": recommendations}
-            return json.dumps(recomm_json)
+            rec_json = {"recommendations": recommendations}
+            return json.dumps(rec_json)
     else:
         return []
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=5000)
