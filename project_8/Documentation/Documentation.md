@@ -60,7 +60,12 @@ accuracy =  0.6613
 
 
 # Выбор итоговой модели для построения рекомендаций
-Для реализации рекомендательной системы была в качестве итоговой была выбрана модель LightFM. 
+
+Для реализации рекомендательной системы была в качестве итоговой была выбрана модель LightFM, обученная в рамках ноутбука на Google Colab:
+https://github.com/PoluboyarinovSI/SF_DataScience/blob/main/project_8/lfm_model.ipynb
+
+Сохраненная модель и сопутствующие файлы для реализации рекомендательной системы размещены на Google-диске:
+https://drive.google.com/drive/folders/1ZQ1UlJwg-SSqRpZDoRqTE3__D-PN7evF?usp=sharing
 
 
 # Описание реализованного API
