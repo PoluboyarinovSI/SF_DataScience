@@ -79,7 +79,7 @@ https://drive.google.com/drive/folders/1ZQ1UlJwg-SSqRpZDoRqTE3__D-PN7evF?usp=sha
 - 0.0.0.0:5000/recomendations/?visitorid=5
     
 
-# Описание команд для запуска сервиса 
+# Описание команд для запуска сервиса (из дирректории web)
 
 - Создание docke-контейнера: docker build -t retail_recomender .
 - Запуск docker-контейнера: docker run -d -p 5000:5000 retail_recomender retail_recomender
@@ -94,6 +94,7 @@ https://drive.google.com/drive/folders/1ZQ1UlJwg-SSqRpZDoRqTE3__D-PN7evF?usp=sha
 - app/server.py - исполняемый файл API-сервиса, который реализует маршрутизацию сервиса
 - app/predictor.py - исполняемый файл API-сервиса, который реализует рекомендательную систему на основе сохраненной модели,
                содержит 2 метода (формирование рекомендации по id пользователя и проверка наличия пользователя в системе)
-- app/models/lfm_model.pkl - pickle-файл с обученной моделью
+- app/models/lfm_model.pkl - pickle-файл с обученной моделью 
+!!!(Необходимо положить файл в папку из ссылки: https://drive.google.com/drive/folders/1ZQ1UlJwg-SSqRpZDoRqTE3__D-PN7evF?usp=sharing)
 - app/models/item_id.pkl - pickle-файл со sparese-матрицей 
 - app/models/all_items.pkl - pickle-файл перечнем всех товаров
