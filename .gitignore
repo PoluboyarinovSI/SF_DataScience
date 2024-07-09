@@ -140,6 +140,7 @@ project_8/data
 project_8/web/app/models/ALS
 project_8/web/app/models/Google Colab
 project_8/web/app/models/Local
+project_8/web/app/models/lfm_model.pkl
 project_8/my_env
 
 # Current tasks data
