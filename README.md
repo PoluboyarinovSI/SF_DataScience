@@ -1,5 +1,9 @@
 # SF Data Science projects
 
+## Ноутбуки с текущими заданиями
+
+* [Рабочие ноутбуки](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/Current_tasks)
+
 ## Проекты
 
 * [Проект 0. Игра: Угадай число](https://github.com/PoluboyarinovSI/SF_DataScience/tree/main/project_0)
